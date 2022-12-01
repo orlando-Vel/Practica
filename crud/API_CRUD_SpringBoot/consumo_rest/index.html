@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="index.css">
+</head>
+
+<body class="container" onload="ObtenerProductos()">
+
+  <header>
+    <input type="checkbox" id="check">
+    <nav>
+      <!--menu navegable del proyecto  -->
+      <!-- Ir cambiando porque no se que menus tendremos -->
+      <div class="icon">Suministros <b style="color: red;">A</b>limenticios</div>
+      <div class="serach__box">
+        <input type="search" placeholder="Buscar">
+        <span class="fa fa-search" onclick="location.href='../Plantilla/buscar.html';"></span>
+      </div>
+
+      <ol>
+        <li><a href="../Plantilla/index.html"> home</a></li>
+        <li><a href="../Plantilla/PaginaContactos.html"> Contactenos</a></li>
+        <li><a href="../Plantilla/About.html"> Acerca del Proyecto</a></li>
+        <li><a href="../Plantilla/Reports.html"> Reportes</a></li>
+        <li><a href="../Plantilla/pantalla8.html"> CRUD</a></li>
+        <li><a href="../Plantilla/Perfil_Administrador.html"> GIGACHAD <b style="color: red;">ADMIN</b></a></li>
+      </ol>
+      <label for="check" class="bar">
+        <span class=" fa fa-bars" id="bars"></span>
+        <span class=" fa fa-times" id="times"></span>
+      </label>
+    </nav>
+
+  </header>
+
+
+  <h2 class="titulo-crud">CRUD de Productos</h2>
+  <br><br>
+
+  <form action="" id="frmProductos" class="formulario">
+    <div>
+      <label for="">Ingrese el nombre </label>
+      <input type="text" name="nombre" id="nombre">
+      <input type="hidden" name="nombre" id="nombre">
+    </div>
+    <div>
+      <label for="">Ingrese el Precio </label>
+      <input type="number" step="0.01" name="precio" id="precio">
+    </div>
+    <div>
+      <label for="">ID de el producto</label>
+      <input type="number" step="1" name="id" id="id">
+    </div>
+    <div>
+      <label for="">Ingrese el URL de la foto </label>
+      <input type="url" name="foto" id="foto">
+    </div>
+    <div>
+      <label for="">Ingrese cantidad</label>
+      <input type="number" name="cantidad" id="cantidad">
+    </div>
+
+    <div>
+      <a class="botones" href="#" onclick="GuardarProducto()">Procesar</a>
+      <a class="botones" href="#" onclick="ActualizarProducto()">Actualizar</a>
+    </div>
+  </form>
+  <div class="contenedor-tabla">
+    <table id="tablaProductos" class="tabla-principal">
+      <thead>
+        <tr class="categorias">
+          <th>Accion</th>
+          <th>ID</th>
+          <th>Nombre</th>
+          <th>Precio</th>
+          <th>FotoUrl</th>
+          <th>Cantidad</th>
+        </tr>
+      </thead>
+      <tbody id="cuerpoTabla">
+
+      </tbody>
+    </table>
+    <script src="index.js"></script>
+  </div>
+
+
+  <!--FOOTER-->
+  <footer>
+    <section class="fondo__footer">
+      <div class="footer__container">
+
+        <div class="footer_tarjetaE">
+          <div class="imgbx">
+
+            <h2>Los nutricionistas recomienda no consumir estos productos ¿Porque?</h2>
+            <p><br>
+              Si bien los suplementos nutricionales son de ayuda para el organismo, no es necesario su
+              consumo diario. Estos son medicados cuando la persona tienen un déficit de vitaminas,
+              minerales o falta de peso corporal, por lo que se complementa su alimentación.
+            </p>
+          </div>
+        </div>
+
+
+        <div class="footer_tarjeta">
+          <div class="imgbx">
+            <h2>Redes Sociales</h2>
+            <div class="redes__infor">
+              <img src="../img/gorjeo.png" alt="">
+              <p>Twitter</p>
+
+            </div>
+            <div class="redes__infor">
+
+              <img src="../img/facebook.png" alt="">
+              <p>Facebook</p>
+
+            </div>
+            <div class="redes__infor">
+
+              <img src="../img/instagram.png" alt="">
+              <p>Instagran</p>
+            </div>
+
+          </div>
+        </div>
+
+
+      </div>
+      <div class="copy">
+        Copyright <img class="logo" src="../img/copy.png" alt=""><br><br><br>
+      </div>
+    </section>
+
+  </footer>
+</body>
+
+</html>
